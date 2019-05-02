@@ -1,12 +1,17 @@
-git init
-git add Dockerfile README.md
-git commit -m "first commit"
+# Servderless tutorial
 
-curl -u 'harry-quantum' https://api.github.com/user/repos -d '{"name":"sls-my"}'
+This creates a docker image that has serverless setup
 
-git remote add origin git@github.com-harry-quantum:harry-quantum/sls-my.git
-git push -u origin master
+- It's used to experiment with serverless
+- You can add serverless config files in the project
+- ...
 
-git config --list --show-origin
+```
+docker build -t local/sls-my .
+
+docker run --rm -it -v ${PWD}:/workdir -v ${HOME}/.aws:/root/.aws:ro --entrypoint sh -e AWS_PROFILE=default local/sls-my
+```
+
+## notes
 
 
