@@ -1,4 +1,4 @@
-# Servderless tutorial
+# Serverless tutorial
 
 This creates a docker image that has serverless setup
 
